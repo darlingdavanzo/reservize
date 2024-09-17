@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+# Reservize Frontend - Reservation Web Application for Restaurants and Bars
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Reservize** is a sleek, modern frontend built for a reservation system designed specifically for the food and beverage industry. This user-friendly application enables restaurants and bars to offer an easy-to-use, responsive interface for customers to book reservations.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running Locally](#running-locally)
+- [Project Structure](#project-structure)
+- [Deployment](#deployment)
+- [License](#license)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Reservation Interface**: Users can select the number of guests, choose the date, and select from available time slots for reservations.
+- **Fully Responsive Design**: Built using Tailwind CSS to ensure a seamless experience on desktop, tablet, and mobile.
+- **Step-by-Step Process**: Users are guided through a simple, multi-step reservation process, from selecting guests to confirming their booking.
+- **Validation**: Integrated form validation to ensure that all required fields are filled before proceeding to the next step.
+- **Calendar Component**: Custom calendar component that highlights available and fully booked dates.
+- **Time Slot Selection**: Time slots are dynamically updated based on the selected date.
+- **Aesthetic Consistency**: Disabled time slots and dates are shown but non-selectable to ensure a clean and consistent UI.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technology Stack
 
-### `npm test`
+- **Frontend Framework**: React.js (with Hooks)
+- **CSS Framework**: Tailwind CSS
+- **State Management**: React's useState and useEffect hooks
+- **Calendar and Time Selection**: Custom-built components
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Before starting the project, make sure you have the following tools installed:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Node.js](https://nodejs.org/) (v14.x or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. **Clone the repository**:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   git clone https://github.com/your-username/reservize-frontend.git
+   cd reservize-frontend
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Install dependencies**:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   npm install
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   or, if you prefer Yarn:
 
-## Learn More
+   ```bash
+   yarn install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Running Locally
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To start the project in development mode:
 
-### Code Splitting
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+or, if using Yarn:
 
-### Analyzing the Bundle Size
+```bash
+yarn start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The frontend will be available at `http://localhost:3000`.
 
-### Making a Progressive Web App
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+reservize-frontend/
+│
+├── public/                     # Public assets and HTML template
+├── src/                        # Source code for the React frontend
+│   ├── components/             # React components (Calendar, SuccessMessage, etc.)
+│   ├── pages/                  # Main pages (e.g., ReservationPage)
+│   ├── hooks/                  # Custom hooks (if any)
+│   ├── App.js                  # Main application entry point
+│   ├── index.js                # ReactDOM rendering
+│   └── styles/                 # Global and component-specific styles
+├── .gitignore                  # Files to ignore in Git
+├── package.json                # npm/yarn dependencies and scripts
+├── README.md                   # Project readme file
+└── tailwind.config.js          # Tailwind CSS configuration
+```
 
-### Advanced Configuration
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To deploy this frontend application, follow these steps:
 
-### Deployment
+1. **Build the project** for production:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+   ```bash
+   npm run build
+   ```
 
-### `npm run build` fails to minify
+   This will create an optimized production build in the `build/` folder.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+2. **Deploy**:
+
+   - You can deploy the generated `build/` folder to any static site hosting service, such as:
+     - [Netlify](https://www.netlify.com/)
+     - [Vercel](https://vercel.com/)
+     - [GitHub Pages](https://pages.github.com/)
+     - [AWS S3](https://aws.amazon.com/s3/) (with CloudFront for CDN)
+   - Most of these services support CI/CD pipelines, so you can automatically deploy changes from the `main` branch.
+
+## License
+
+This project is licensed under the MIT License.
