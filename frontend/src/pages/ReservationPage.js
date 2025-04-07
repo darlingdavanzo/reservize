@@ -1,6 +1,8 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import Calendar from '../components/Calendar';
 import SuccessMessage from '../components/SuccessMessage';
+import restaurantBg from '../assets/restaurant_bg2.jpg';
+import reservationSideImg from '../assets/restaurant_reservation_side.jpg';
 
 const Step1 = ({ people, setPeople }) => (
   <div className="space-y-6">
@@ -303,12 +305,12 @@ const ReservationPage = () => {
   }, [step, date, hasScrolled]);
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-cover bg-center" style={{ backgroundImage: `url(${restaurantBg})` }}>
       <div className="max-w-7xl w-full flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden">
         {/* Hero Image */}
         <div className="md:w-1/2 w-full">
           <img
-            src="https://placehold.co/800x600"
+            src={reservationSideImg}
             alt="Hero"
             className="w-full h-full object-cover"
           />
