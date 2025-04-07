@@ -80,7 +80,7 @@ The frontend will be available at `http://localhost:3000`.
 ## Project Structure
 
 ```bash
-reservize/
+reservize-frontend/
 │
 ├── public/                     # Public assets and HTML template
 ├── src/                        # Source code for the React frontend
